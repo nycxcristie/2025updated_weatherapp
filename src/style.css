@@ -1,7 +1,41 @@
-h1 {
+body {
+  background-color: rgba(251, 251, 251, 0.563);
   font-family: helvetica;
-  color: #2b52fd;
+}
+.weather-app {
+  max-width: 600px;
+  margin: 45px auto;
+  padding: 30px 30px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -4px 10px 121px -30px rgba(144, 144, 144, 0.418);
+  border-radius: 16px;
+}
+header {
+  text-align: center;
+}
+h1 {
+  margin: 50px 0px 5px 0px;
+  color: #344261;
+  font-weight: 90;
+  font-size: 75px;
+}
+h2 {
+  margin: 100px 0px 5px 0px;
+  color: #344261;
+  font-weight: 90;
+  font-size: 75px;
+}
+h3 {
+  margin: 0;
+  color: #344261;
+  font-weight: 500;
+  font-size: 18px;
 }
 footer {
-  font-family: helvetica;
+  color: black;
+}
+p {
+  color: #344261;
+  font-weight: 500;
+  font-size: 20px;
 }
