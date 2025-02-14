@@ -6,36 +6,96 @@
     <link rel="stylesheet" href="src/style.css" />
     <title>2025 Updated Weather App</title>
   </head>
-  <body> 
+  <body>
     <div class="weather-app">
-        <header>
-            <form>
-                <input type="search" placeholder="Enter a city..." required/>
-                <input type="submit" value="search"/>
-            </form>
-        
-            <h1>
-                Chantilly
-                </h1>
-                
-                <h3>Thursday 2/14/2024</h3>
-                
-                <p>Sunny</p>
-                <p>☀</p>
-                <p>💧 humidity 85%</p>
-                    
-                <h2>75°F</h2> 
-                <p>💨 wind: 3.77km/h</p>
-         </header>    
+      <header>
+        <form class="search-form">
+          <input
+            class="search-form-input"
+            type="search"
+            placeholder="Enter a city..."
+            required
+          />
+          <input class="search-form-button" type="submit" value="Search" />
+        </form>
+      </header>
+      <main>
+        <div class="date-time">
+          <h2><strong>8:02PM</strong></h2>
+          <h3>Thursday 2/14/2024</h3>
+        </div>
+        <h1>Chantilly</h1>
 
-
-    </main>
-    <footer>
-      This project was coded by <a href="https://dainty-seahorse-d759fc.netlify.app/about" target=""_blank"">Cristina Isaacson</a>, is open-sourced on
-      <a href="http://github.com/nycxcristie" target="_blank">Github</a> and website hosted on
-      <a href="https://2005updatedweatherapp.netlify.app/" target="_blank"">Netlify</a>
-    </footer>
-    <script src="src/script.js"></script>
+        <p>Sunny</p>
+        <p>
+          <span class="sunshine"> ☀ </span><span class="temperature">75</span
+          ><span class="f">°F</span>
+        </p>
+        <p class="humind">
+          <span class="humidity">💧 humidity: 85%</span>
+          <span class="wind">💨 wind: 3.77km/h</span>
+        </p>
+        <div class="five-day-forecast"></div>
+      </main>
+      <div class="flex-container">
+        <ul>
+          <li>
+            <p class="weekday">Sunday</p>
+            <p class="icon">🌧</p>
+            <p class="five-day-temp">
+              <span class="high"><strong>78° </strong></span
+              ><span class="low"> 70°</span>
+            </p>
+          </li>
+          <li>
+            <p class="weekday">Sunday</p>
+            <p class="icon">🌧</p>
+            <p class="five-day-temp">
+              <span class="high"><strong>78° </strong></span
+              ><span class="low"> 70°</span>
+            </p>
+          </li>
+          <li>
+            <p class="weekday">Sunday</p>
+            <p class="icon">🌧</p>
+            <p class="five-day-temp">
+              <span class="high"><strong>78° </strong></span
+              ><span class="low"> 70°</span>
+            </p>
+          </li>
+          <li>
+            <p class="weekday">Sunday</p>
+            <p class="icon">🌧</p>
+            <p class="five-day-temp">
+              <span class="high"><strong>78° </strong></span
+              ><span class="low"> 70°</span>
+            </p>
+          </li>
+          <li>
+            <p class="weekday">Sunday</p>
+            <p class="icon">🌧</p>
+            <p class="five-day-temp">
+              <span class="high"><strong>78° </strong></span
+              ><span class="low"> 70°</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <footer>
+        This project was coded by
+        <a
+          href="https://dainty-seahorse-d759fc.netlify.app/about"
+          target="_blank"
+          >Cristina Isaacson</a
+        >, is open-sourced on
+        <a href="http://github.com/nycxcristie" target="_blank">Github</a>
+        and website hosted on
+        <a href="https://2005updatedweatherapp.netlify.app/" target="_blank"
+          >Netlify</a
+        >
+      </footer>
+      <script src="src/script.js"></script>
     </div>
   </body>
 </html>
