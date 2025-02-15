@@ -26,8 +26,8 @@
       </header>
       <main>
         <div class="date-time">
-          <h2><strong>8:02PM</strong></h2>
-          <h3>Thursday 2/14/2024</h3>
+          <h2 class="time" id="time">8:02PM</h2>
+          <h3 id="date">Thursday 2/14/2024</h3>
         </div>
         <h1 id="city">Chantilly</h1>
         <p class="sunny">Sunny</p>
@@ -37,8 +37,9 @@
         ><span class="f">°F</span>
 
         <p class="humind">
-          <span class="humidity">💧 humidity: 85%</span>
-          <span class="wind">💨 wind: 3.77km/h</span>
+          <span class="humidity">💧 humidity: </span
+          ><span id="humidityNum">85</span>%
+          <span class="wind">💨 wind: <span id="windNum">3.77</span>km/h</span>
         </p>
         <div class="five-day-forecast"></div>
       </main>

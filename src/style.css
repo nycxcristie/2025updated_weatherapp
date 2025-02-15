@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(188, 225, 250, 0.563);
+  background-color: #b7ebfa;
   font-family: helvetica;
 }
 header {
@@ -57,7 +57,7 @@ p {
   margin: 0;
 }
 main {
-  background-color: rgb(246, 246, 248);
+  background-color: #fafafa;
   border-radius: 20px;
   padding: 0px 0px 0px 0px;
   box-shadow: -4px 10px 121px -30px rgba(172, 172, 172, 0.418);
@@ -73,7 +73,7 @@ main {
   padding: 30px 30px 0px 0px;
 }
 .five-day-forecast {
-  background-color: white;
+  background-color: #e2e6e9;
   margin: 45px;
 }
 .humidity {
@@ -83,7 +83,7 @@ main {
   padding: 0px 10px 50px 10px;
 }
 .weather-app {
-  max-width: 800px;
+  max-width: 600px;
   margin: 45px auto;
   padding: 0px 30px 30px 30px;
   background-color: rgb(239, 247, 249);
@@ -95,12 +95,12 @@ main {
 }
 .search-form-input {
   font-size: 17px;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   box-shadow: -4px 10px 121px -30px rgba(10, 10, 10, 0.418);
   border-radius: 10px;
   border: none;
   padding: 18px;
-  width: 80%;
+  width: 70%;
   margin: 40px 5px 0px 5px;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -133,6 +133,9 @@ main {
   color: #344261;
   font-weight: 700;
   font-size: 100px;
+}
+.time {
+  font-weight: 600;
 }
 .f {
   margin: 0;
