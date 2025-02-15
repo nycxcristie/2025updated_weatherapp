@@ -7,6 +7,11 @@ function updateWeather(response) {
   temperatureElement.innerHTML = Math.round(realFTemperature);
   // getting temperature from search ends here
 
+  //   also update city Element with API city spelling --starts here--
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = response.data.city;
+  //   also update city Element with API city spelling --ends here--
+
   //   getting humidity starts here
   let humidityElement = document.querySelector("#humidityNum");
   let humidityUpdate = response.data.temperature.humidity;
@@ -31,8 +36,6 @@ function searchCity(city) {
 function handleSearch(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#newCity");
-  let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = searchInputElement.value;
   searchCity(searchInputElement.value);
 }
 
