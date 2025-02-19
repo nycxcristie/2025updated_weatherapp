@@ -7,23 +7,29 @@ function updateWeather(response) {
   temperatureElement.innerHTML = Math.round(realFTemperature);
   // getting temperature from search ends here
 
-  //   also update city Element with API city spelling --starts here--
+  //   update image icon starts here--
+  //   let weathericonElement = document.querySelector("#sunshine");
+  //   weathericonElement.innerHTML = ``;
+  //   update image icon ends here--
+
+  let descriptionElement = document.querySelector("#sunny");
+  descriptionElement.innerHTML = response.data.condition.description;
+
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.city;
-  //   also update city Element with API city spelling --ends here--
 
-  //   getting humidity starts here
   let humidityElement = document.querySelector("#humidityNum");
   let humidityUpdate = response.data.temperature.humidity;
-
   humidityElement.innerHTML = humidityUpdate;
-  //   getting humidity ends here
 
-  //   getting humidity starts here
   let windElement = document.querySelector("#windNum");
   let windUpdate = response.data.wind.speed;
   windElement.innerHTML = windUpdate;
-  // getting humidity ends here
+
+  let feelsTempElement = document.querySelector("#feelsTemp");
+  let feelsTempUpdate = response.data.temperature.feels_like;
+  let realFfeelsTemp = (feelsTempUpdate * 9) / 5 + 32;
+  feelsTempElement.innerHTML = Math.round(realFfeelsTemp);
 }
 
 function searchCity(city) {

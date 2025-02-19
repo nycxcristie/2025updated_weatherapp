@@ -12,6 +12,10 @@
   </head>
   <body>
     <div class="weather-app">
+      <div class="date-time">
+        <h2 class="time" id="time">8:02PM</h2>
+        <h3 id="date">Thursday 2/14/2024</h3>
+      </div>
       <header>
         <form class="search-form" id="searchForm">
           <input
@@ -24,23 +28,41 @@
           <input class="search-form-button" type="submit" value="Search" />
         </form>
       </header>
+
       <main>
-        <div class="date-time">
-          <h2 class="time" id="time">8:02PM</h2>
-          <h3 id="date">Thursday 2/14/2024</h3>
+        <div class="current-temp">
+          <div class="col-1">
+            <h1 id="city">Philadelphia</h1>
+            <div>
+              <p>
+                <span class="sunny" id="sunny">Sunny</span>, feels like:
+                <span id="feelsTemp"> 0</span>°F
+              </p>
+            </div>
+            <p class="humind">
+              <span class="humidity">💧 humidity: </span
+              ><span id="humidityNum">85</span>%
+              <span class="wind"
+                >💨 wind: <span id="windNum">3.77</span>km/h</span
+              >
+            </p>
+          </div>
+
+          <div class="col-2">
+            <div class="icon-description"></div>
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+              class="icon"
+              id="icon"
+            />
+
+            <div class="temp-degrees">
+              <span class="temperature" id="temperature">75</span
+              ><span class="f">°F</span>
+            </div>
+          </div>
         </div>
-        <h1 id="city">Chantilly</h1>
-        <p class="sunny">Sunny</p>
-        <span class="sunshine">☀</span>
 
-        <span class="temperature" id="temperature"> 75</span
-        ><span class="f">°F</span>
-
-        <p class="humind">
-          <span class="humidity">💧 humidity: </span
-          ><span id="humidityNum">85</span>%
-          <span class="wind">💨 wind: <span id="windNum">3.77</span>km/h</span>
-        </p>
         <div class="five-day-forecast"></div>
       </main>
       <div class="flex-container">
