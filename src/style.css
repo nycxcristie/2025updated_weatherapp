@@ -1,5 +1,5 @@
 body {
-  background-color: #b7ebfa;
+  background-color: #e0f0fd;
   font-family: helvetica;
 }
 header {
@@ -87,7 +87,7 @@ main {
 }
 
 .weather-app {
-  max-width: 800px;
+  max-width: 700px;
 
   margin: 45px auto;
   padding: 0px 30px 30px 30px;
@@ -113,14 +113,18 @@ main {
 .search-form-button {
   font-size: 17px;
   font-weight: 500;
-  color: rgb(191, 190, 190);
-  background-color: #2592eb;
+  color: rgb(233, 232, 232);
+  background-color: #35a3fd;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   border: none;
   width: 150px;
   padding: 18px;
   margin: 20px 10px;
+}
+.search-form-button:hover {
+  background-color: #0787ef;
+  color: rgb(233, 232, 232);
 }
 .sunny {
   text-transform: capitalize;
@@ -153,4 +157,7 @@ main {
   color: #344261;
   font-weight: 00;
   font-size: 50px;
+}
+.smIcon {
+  text-align: center;
 }

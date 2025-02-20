@@ -7,11 +7,6 @@ function updateWeather(response) {
   temperatureElement.innerHTML = Math.round(realFTemperature);
   // getting temperature from search ends here
 
-  //   update image icon starts here--
-  //   let weathericonElement = document.querySelector("#sunshine");
-  //   weathericonElement.innerHTML = ``;
-  //   update image icon ends here--
-
   let descriptionElement = document.querySelector("#sunny");
   descriptionElement.innerHTML = response.data.condition.description;
 
@@ -30,6 +25,10 @@ function updateWeather(response) {
   let feelsTempUpdate = response.data.temperature.feels_like;
   let realFfeelsTemp = (feelsTempUpdate * 9) / 5 + 32;
   feelsTempElement.innerHTML = Math.round(realFfeelsTemp);
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class= "weather-icon"/>`;
+  console.log(iconElement);
 }
 
 function searchCity(city) {
@@ -102,6 +101,12 @@ let monthToday = months[month];
 //   }
 // }
 // let min = showMinutes();
+// or use:
+
+// if (minutes < 10) {
+//     minutes = `0${minutes}`;
+// }
+//
 // --show minutes with 0 when it's a single digit-- ends here--
 
 // --decide if it's AM or PM-- starts here--
@@ -130,3 +135,5 @@ newTime.innerHTML = `${timeString}`;
 // date starts here--
 let newDate = document.querySelector("#date");
 newDate.innerHTML = `${day} ${monthToday} ${date}, ${year}`;
+
+searchCity("New York");
