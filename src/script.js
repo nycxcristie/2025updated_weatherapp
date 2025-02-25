@@ -28,7 +28,6 @@ function updateWeather(response) {
 
   let iconElement = document.querySelector("#icon");
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class= "weather-icon"/>`;
-  console.log(iconElement);
 }
 
 function searchCity(city) {
@@ -135,5 +134,27 @@ newTime.innerHTML = `${timeString}`;
 // date starts here--
 let newDate = document.querySelector("#date");
 newDate.innerHTML = `${day} ${monthToday} ${date}, ${year}`;
+// date ends here--
+
+function displayForecast() {
+  let fdfElement = document.querySelector("#fdf");
+
+  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="five-day-forecast" id="fdf">
+        <div class="fdf-weekday" id="fdf-weekday">${day}</div>
+        <div class="fdf-smIcon" id="fdf-smIcon">🌧</div>
+        <div class="fdf-five-day-temp" id="fdf-five-day-temp">
+          <span class="fdf-high">78°F</span><span class="fdf-low"> 70°F</span>
+        </div>
+      </div>`;
+  });
+  fdfElement.innerHTML = forecastHtml;
+}
 
 searchCity("New York");
+displayForecast();
